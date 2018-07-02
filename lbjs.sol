@@ -2,13 +2,14 @@ pragma solidity ^0.4.0;
 
 library _string{
     
-    function split(string _strg)internal returns(string[]){
+    /*function split(string _strg)internal returns(string[]){
         string[] result;
+        uint vl;
         for(uint i = 0; i < bytes(_strg).length;i++){
             
         }     
         return result;
-    }
+    }*/
     
     function slice(string _strg,uint _a,uint _b)internal returns(string){
         return _strg;
@@ -25,7 +26,7 @@ library _string{
         return result;
     }
     
-    function concact(string _a, string _b)internal returns(string){
+    function concat(string _a, string _b)internal returns(string){
         bytes memory a = bytes(_a);
         bytes memory b = bytes(_b);
         string memory wrds = new string(a.length + b.length);
@@ -42,23 +43,19 @@ library _string{
     
 }
 
+
 //----------------------------------int-------------------------------
+
 
 library _int{
     
-    function toBytes(int _intVal)internal returns(bytes){
-        bytes32 intBt32 = bytes32(_intVal);
-        bytes memory result;
-        for(uint i =0; i < 32; i++){
-            result[i] = intBt32[i];
-        }
-        return result;
-    }
+   // function toBytes(int _intVal)internal returns(bytes){}
 
 }
 
 
 //----------------------------------arrays-----------------------------
+
 
 library _array{
     
@@ -87,10 +84,14 @@ library _array{
         }
         return result;
     }
+    
+    //function remove(string[] _arr,string _charact) internal returns(string[]){}
    
 }
 
+
 //----------------------------------bytes-------------------------------
+
 
 library _bytes{
     
